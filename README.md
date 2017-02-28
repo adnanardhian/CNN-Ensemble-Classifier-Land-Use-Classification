@@ -6,6 +6,7 @@ In this project, the architecture of the cnn is same as cofar-10 architecture, t
 also using keras library, with Theano as backend
 
 The Land Use dataset is from UC Merced Land Use Dataset, thanks to http://vision.ucmerced.edu/datasets/landuse.html Total data used is 2100 images, which consist of 21 classes, each class consist of 100 images, the classes are:
+
 1. agricultural
 2. airplane
 3. baseballdiamond
