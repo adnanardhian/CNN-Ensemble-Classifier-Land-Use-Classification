@@ -1,0 +1,2 @@
+# CNN_ensemble_classifier_LandUseClassification
+Convolutional Neural Network combined with ensemble classifier for land use classification
