@@ -12,7 +12,7 @@ import pandas as pd
 from PIL import Image
 import numpy as np
 
-# Get image data as an array that will become the input for the Neural Network
+# Get image data as an array that will become the input (X) for the Neural Network
 # im_path : Image path (Directories)
 # start_idx : start index, all images are renamed with number from 0-2099
 # end_idx : end index
@@ -27,7 +27,8 @@ def getImageData(im_path, start_idx, end_idx):
     imData.append([r,g,b])
   return np.array(imData)
 
-# Get the label value that will become the input for the Neural Network 
+# Get the label value that will become the input (Y) for the Neural Network
+# label_path : csv file consist of labels
 def getLabel(label_path):
   labels = pd.read_csv(label_path)
   label_value = labels['class'].values
@@ -48,10 +49,9 @@ img_channels = 3
 X = getImageData('Data128/',0,2100)
 Y = getLabel('label.csv')
 
-mm = 2100-210 #Get 90% for train, and 10% for test
-
-# The data, shuffled and split between train and test sets:
-(X_train, y_train), (X_test, y_test) = (X[:mm],Y[:mm]), (X[mm:], Y[mm:])
+split_idx = 2100-210 #Get 90% for train, and 10% for test
+# The data, split between train and test sets:
+(X_train, y_train), (X_test, y_test) = (X[:split_idx],Y[:split_idx]), (X[split_idx:], Y[split_idx:])
 
 print('X_train shape:', X.shape)
 print(X_train.shape[0], 'train samples')
