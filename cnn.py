@@ -102,5 +102,5 @@ model.fit(X_train, Y_train,
 
 model.save_weights('WeightCNN.h5') # the weight after train will be saved and used for the ensemble classifier later  
 score = model.evaluate(X_test, Y_test, verbose=0)
-print('Test score:', score[0])
+print('Test loss:', score[0])
 print('Test accuracy:', score[1])
