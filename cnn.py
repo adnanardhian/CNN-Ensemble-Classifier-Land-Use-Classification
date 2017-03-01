@@ -39,7 +39,7 @@ def getLabel(label_path):
 
 batch_size = 21 
 nb_classes = 21
-nb_epoch = 2
+nb_epoch = 15
 
 # input image dimensions that has been resized
 img_rows, img_cols = 128,128
