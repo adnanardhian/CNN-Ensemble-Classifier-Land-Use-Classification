@@ -45,7 +45,7 @@ print(X_test.shape[0], 'test samples')
 Y_train = np_utils.to_categorical(y_train, NB_CLASSES)
 Y_test = np_utils.to_categorical(y_test, NB_CLASSES)
 
-for i in range(0,20): # 20 iterations will be done, and 20 weight will be saved (customizable)
+for i in range(0,2): # 2 iterations will be done, and 2 weights will be saved (customizable)
 	model = Sequential()
 	model.add(Flatten(input_shape=(512,8,8)))
 	model.add(Dense(512, activation='relu'))
@@ -75,4 +75,4 @@ for i in range(0,20): # 20 iterations will be done, and 20 weight will be saved 
 	SCORES.append(score[1])
 	INDEXS.append(i+1)
 
-write_csv('vgg16/TIFF/VGG19',len(SCORES),INDEXS,SCORES)
+write_csv('vgg16/TIFF/VGG'+str(VGG_LAYER),len(SCORES),INDEXS,SCORES)
