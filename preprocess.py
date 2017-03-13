@@ -19,24 +19,24 @@ def getImageData(im_path, start_idx, end_idx):
   return np.array(imData)
 
 if __name__ == '__main__':
-  
-  #Choosing the number of layer from VGG 
+	
+  # Choosing the number of layer from VGG 
   if VGG_LAYER==16:
     extractor = VGG16(weights='imagenet', include_top=False)
   elif VGG_LAYER==19:
     extractor = VGG19(weights='imagenet', include_top=False)
 
-  #Get ImageData of 1 subsample (1 image every class)
-	# IMG/ is folder containing image data
+  # Get ImageData of 1 subsample (1 image every class)
+  # 'IMG' is a folder containing image data
   data1 = getImageData('IMG/',0,21)
-  X = extractor.predict(data1, verbose=1)
+  X = extractor.predict(data1, verbose=0)
 	
   #iterate for all 2100 images (100 times)
   for i in range(1,100):
 	  data2 = getImageData('IMG/',i*21,i*21+21)
-	  X2 = extractor.predict(data2, verbose=1)
+	  X2 = extractor.predict(data2, verbose=0)
 	  X = np.concatenate((X,X2), axis=0)
-	print(X.shape)
-  
+	  print(X.shape) # to clarify only (optional)
+		
   # save the array to external file that will be used for Neural Network
   np.save('Input_NN_VGG'+str(VGG_LAYER)+'.npy',X)
