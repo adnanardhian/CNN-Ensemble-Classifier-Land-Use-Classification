@@ -68,7 +68,7 @@ for i in range(0,20): # 20 iterations will be done, and 20 weight will be saved 
           validation_data=(X_test, Y_test),
           shuffle=True)
 
-	model.save_weights('WeightFile/WeightVGG19_'+str(i+1)+'.h5')  # WeightFile is the folder that weight after trained will be saved inside
+	model.save_weights('WeightFile/WeightVGG'+str(VGG_LAYER)+'_'+str(i+1)+'.h5')  # WeightFile is the folder that weight after trained will be saved inside
 	score = model.evaluate(X_test, Y_test, verbose=0)
 	print('Test score:', score[0])
 	print('Test accuracy:', score[1])
