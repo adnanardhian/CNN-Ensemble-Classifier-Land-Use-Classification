@@ -33,5 +33,7 @@ The Land Use dataset is from UC Merced Land Use Dataset, thanks to http://vision
 Each are labelled with number from 0-20 manually, labels are stored in a csv file that will be read during the training and testing.
 
 to train and test the data on CNN with transfer learning:
+
 step1 : run the preprocess.py
+
 step2 : run the cnn_transfer_vgg.py
