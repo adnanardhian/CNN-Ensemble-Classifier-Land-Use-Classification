@@ -68,11 +68,11 @@ for i in range(0,2): # 2 iterations will be done, and 2 weights will be saved (c
           validation_data=(X_test, Y_test),
           shuffle=True)
 
-	model.save_weights('WeightFile/WeightVGG'+str(VGG_LAYER)+'_'+str(i+1)+'.h5')  # WeightFile is the folder that weight after trained will be saved inside
+	model.save_weights('WeightFile/WeightVGG'+str(VGG_LAYER)+'_'+str(i+1)+'.h5')  # WeightFile is the folder that weight after trained will be saved inside, make sure it is already exist
 	score = model.evaluate(X_test, Y_test, verbose=0)
 	print('Test score:', score[0])
 	print('Test accuracy:', score[1])
 	SCORES.append(score[1])
 	INDEXS.append(i+1)
 
-write_csv('vgg16/TIFF/VGG'+str(VGG_LAYER),len(SCORES),INDEXS,SCORES)
+write_csv('VGG'+str(VGG_LAYER),len(SCORES),INDEXS,SCORES)
