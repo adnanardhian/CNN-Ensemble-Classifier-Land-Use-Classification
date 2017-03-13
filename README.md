@@ -1,5 +1,5 @@
 # CNN-ensemble-classifier-Land-Use-Classification
-Convolutional Neural Network combined with ensemble classifier for land use classification
+Convolutional Neural Network combined with ensemble classifier for land use classification, ensemble classifier that will be used is Random Forest
 
 In this project, transfer learning is used, the configuration of the cnn is same as VGG-16 & VGG-19, thanks to https://github.com/fchollet/keras/blob/master/keras/applications/vgg16.py
 https://github.com/fchollet/keras/blob/master/keras/applications/vgg19.py
@@ -32,8 +32,11 @@ The Land Use dataset is from UC Merced Land Use Dataset, thanks to http://vision
 
 Each are labelled with number from 0-20 manually, labels are stored in a csv file that will be read during the training and testing.
 
-to train and test the data on CNN with transfer learning:
+to train and test the data on CNN with transfer learning, without random forest:
 
 step1 : run the preprocess.py
 
 step2 : run the cnn_transfer_vgg.py
+
+
+to combine cnn result random forest, use : step1 --> step2 --> run the vgg_rf.py
