@@ -4,7 +4,7 @@ Convolutional Neural Network combined with ensemble classifier for land use clas
 In this project, transfer learning is used, the configuration of the cnn is same as VGG-16 & VGG-19, thanks to https://github.com/fchollet/keras/blob/master/keras/applications/vgg16.py
 https://github.com/fchollet/keras/blob/master/keras/applications/vgg19.py
 
-Random forest is build using sklearn, thanks to : http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+Random forest is build using scikit-learn, thanks to : http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
 
 also using keras library, with Theano as backend
 
