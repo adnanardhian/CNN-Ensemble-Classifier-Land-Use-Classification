@@ -1,7 +1,8 @@
 # CNN-ensemble-classifier-Land-Use-Classification
 Convolutional Neural Network combined with ensemble classifier for land use classification
 
-In this project, the architecture of the cnn is same as cifar-10 architecture, thanks to https://github.com/fchollet/keras/blob/master/examples/cifar10_cnn.py
+In this project, transfer learning is used, the configuration of the cnn is same as VGG-16 & VGG-19, thanks to https://github.com/fchollet/keras/blob/master/keras/applications/vgg16.py
+https://github.com/fchollet/keras/blob/master/keras/applications/vgg19.py
 
 also using keras library, with Theano as backend
 
