@@ -14,7 +14,7 @@ SCORES = []
 BATCH_SIZE = 21
 NB_CLASSES = 21
 NB_EPOCH = 40
-VGG_LAYER = 16
+VGG_LAYER = 16 # 16 or 19
 
 # Get label ready for Neural Network
 def getLabel(label_path):
