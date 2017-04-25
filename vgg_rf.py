@@ -11,7 +11,7 @@ from sklearn import model_selection
 from sklearn.ensemble import RandomForestClassifier
 
 NB_CLASSES = 21
-VGG_LAYER = 16
+VGG_LAYER = 16 #16 or 19
 
 # Random Forest Parameter
 SEED = 7
