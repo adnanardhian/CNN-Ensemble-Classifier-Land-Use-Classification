@@ -47,7 +47,7 @@ Y_test = np_utils.to_categorical(y_test, NB_CLASSES)
 
 for i in range(0,2): # 2 iterations will be done, and 2 weights will be saved (customizable)
 	model = Sequential()
-	model.add(Flatten(input_shape=(512,8,8)))
+	model.add(Flatten(input_shape=(512,8,8))) #Shape of output from exctractor 
 	model.add(Dense(512, activation='relu'))
 	model.add(Dropout(0.5))
 	model.add(Dense(NB_CLASSES))
